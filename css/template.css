@@ -1,0 +1,67 @@
+ /* Add specific styles for the table */
+table {
+    width: 100%; /* Set table width to 100% */
+    border-collapse: collapse; /* Collapse borders */
+    border: 2px solid #ddd; /* Add border */
+}
+
+/* Add specific styles for table caption */
+caption {
+    font-size: 1.2em; /* Set font size */
+    font-weight: bold; /* Set font weight */
+    margin-bottom: 10px; /* Add margin bottom */
+}
+
+/* Add specific styles for table header */
+th {
+    background-color: #f2f2f2; /* Set background color */
+    padding: 10px; /* Add padding */
+    text-align: left; /* Align text to left */
+    border: 1px solid #ddd; /* Add border */
+}
+
+/* Add specific styles for table data */
+td {
+    padding: 10px; /* Add padding */
+    border: 1px solid #ddd; /* Add border */
+}
+
+/* Add specific styles for alternating row colors */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Set background color for even rows */
+}
+
+/* Add specific styles to highlight table row on mouse over */
+tr:hover {
+    background-color: #f2f2f2; /* Change background color on hover */
+}
+
+/* Add specific styles for table cells with images */
+td.image {
+    width: 100px; /* Set width for cells with images */
+}
+
+/* Add specific styles for table cells with text */
+td.text {
+    width: 200px; /* Set width for cells with text */
+}
+
+/* Add specific styles for the first column */
+td:nth-child(1),
+th:nth-child(2) {
+    /* Add styles here */
+    font-weight: bold; /* Make text bold */
+    color: #333; /* Set text color */
+}
+
+/* Add specific styles for the first column of data cells */
+td:nth-child(3) {
+    /* Add styles here */
+    text-align: left; /* Align text to the left */
+}
+
+/* Add specific styles for the first column of header cells */
+th:nth-child(4) {
+    /* Add styles here */
+    text-align: center; /* Align text to the center */
+}

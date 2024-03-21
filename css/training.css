@@ -1,0 +1,223 @@
+ /*
+    Student Name: Premsingh Padya
+    Student Number: c0924501
+    File Name: team.css
+    Date: 24/02/2024
+*/
+
+/* Resetting margins, borders, and padding */
+body, header, nav, main, footer, footer p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Setting the background color for the website */
+body {
+    background-color: lightskyblue; /* Choose your preferred background color */
+}
+
+/* Style the container element to set the width of the page and center the page */
+#container {
+    max-width: 1150px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* This centers the container by setting left and right margins to auto */
+}
+
+/* Style the header element */
+header {
+    background-color: #333; /* Background color for the header */
+    margin: 20px 0; /* Top and bottom margins */
+    border-radius: 10px; /* Rounded borders */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    text-align: center; /* Center text */
+}
+
+/* Style the nav element */
+.nav {
+    text-align: center; /* Center text in the navigation bar */
+}
+
+.nav ul {
+    list-style: none; /* Removing default list styles */
+    padding: 0; /* Removing default padding */
+}
+
+.nav li {
+    display: inline-block; /* Displaying list items horizontally */
+    margin: 0 10px; /* Adding spacing between list items */
+    border: 1px solid #ccc; /* Adding borders to list items */
+    padding: 8px 16px; /* padding to list items */
+    border-radius: 30px; /* Rounded borders */
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2); /* Shadow effect */
+	background-color: #f0f0f0;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: black; /* Text color for navigation links */
+}
+
+/* Style the main element */
+main {
+    display: block; /* Set as block element */
+    text-align: center; /* Center text in the main content */
+    margin: 20px 0; /* Top and bottom margins */
+    padding: 20px; /* Padding for the main content */
+    border-radius: 50px; /* Rounded borders */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Default fonts for the website */
+body {
+    font-family: Verdana, Arial, sans-serif; /* Use your preferred font family */
+}
+
+/* Adjust font sizes for headings */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em; /* Adjust as needed */
+}
+
+/* Change the color of at least one heading */
+h2 {
+    color: #cc3300; /* Choose your preferred color */
+}
+
+/* Format the list items */
+ul {
+    padding: 0; /* Remove default padding for lists */
+}
+
+li {
+    margin-bottom: 5px; /* Add spacing between list items */
+}
+
+/* CSS for fixed image size */
+article figure img {
+    width: 400px; /* Set the width to your preferred size */
+    height: 200px; /* Set the height to your preferred size */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+    border-radius: 10px; /* Add rounded corners */
+}
+ 
+ /* Add specific styles for the table */
+table {
+    width: 100%; /* Set table width to 100% */
+    border-collapse: collapse; /* Collapse borders */
+    border: 2px solid #ddd; /* Add border */
+}
+
+/* Add specific styles for table caption */
+caption {
+    font-size: 1.2em; /* Set font size */
+    font-weight: bold; /* Set font weight */
+    margin-bottom: 10px; /* Add margin bottom */
+}
+
+/* Add specific styles for table header */
+th {
+    background-color: #f2f2f2; /* Set background color */
+    padding: 10px; /* Add padding */
+    text-align: center; /* Align text to Center */
+    border: 1px solid #ddd; /* Add border */
+}
+
+/* Add specific styles for table data */
+td {
+    padding: 10px; /* Add padding */
+    border: 1px solid #ddd; /* Add border */
+	text-align: center;
+}
+
+/* Add specific styles for alternating row colors */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Set background color for even rows */
+}
+
+/* Add specific styles to highlight table row on mouse over */
+tr:hover {
+    background-color: #f2f2f2; /* Change background color on hover */
+}
+
+/* Add specific styles for table cells with images */
+td.image {
+    width: 100px; /* Set width for cells with images */
+}
+
+/* Add specific styles for table cells with text */
+td.text {
+    width: 200px; /* Set width for cells with text */
+}
+
+/* Add specific styles for the first column */
+td:nth-child(1),
+th:nth-child(2) {
+    /* Add styles here */
+    font-weight: bold; /* Make text bold */
+    color: #333; /* Set text color */
+}
+
+/* Add specific styles for the first column of data cells */
+td:nth-child(3) {
+    /* Add styles here */
+    text-align: left; /* Align text to the left */
+}
+
+/* Add specific styles for the first column of header cells */
+th:nth-child(4) {
+    /* Add styles here */
+    text-align: center; /* Align text to the center */
+}
+
+/* Reduce font size for the footer, center it, and include a top margin */
+footer {
+    font-size: 0.8em; /* Adjust as needed */
+    text-align: center; /* Center text in the footer */
+    margin-top: 20px; /* Top margin for the footer */
+    border-top: 10px solid #ccc; /* Add border at the top of the footer */
+    color: black; /* Text color for the footer */
+    background-color: #f5f5f5; /* Background color for the footer */
+}
+
+/* Additional styles for the navigation list items */
+.nav ul {
+    font-family: cursive;
+    display: flex;
+}
+
+/* Added this because we have this condition in Week 5 as  A logo in the top left corner that links back to the home page */
+
+/* Styles for the logo image in the navigation bar */
+.logo img {
+    margin-right: 10px; /* Adds a right margin of 10 pixels to the logo image */
+    max-width: 10%; /* Sets the maximum width of the logo to 10% of its containing element */
+    display: grid; /* Uses grid layout for the logo image */
+}
+
+/* Hover effect for navigation list items */
+.nav li:hover {
+    background-color: #ddd; /* Background color on hover */
+}
+
+/* Hover effect for main content */
+main:hover {
+    background-color: #ddd; /* Background color on hover */
+}
+
+/* Hover effect for footer */
+footer:hover {
+    background-color: #ddd; /* Background color on hover */
+    color: #777; /* Color of the font has to be changed */
+}
+
+/* Add specific styles for table cells with images */
+td.image {
+    width: 100px; /* Set width for cells with images */
+    padding: 0; /* Remove padding */
+}
+
+/* Adjust image size and styling */
+td.image img {
+    width: 100%; /* Set image width to fill the cell */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Add rounded corners */
+}
