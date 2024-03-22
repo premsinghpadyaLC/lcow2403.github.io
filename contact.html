@@ -50,24 +50,30 @@
     <form action="#" method="POST">
             <fieldset>
                 <legend>Contact Information</legend>
+                <!-- Ordered List -->
                 <ol>
                     <li>
+                        <!-- Text -->
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus>
                     </li>
                     <li>
+                        <!-- email -->
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     </li>
                     <li>
+                        <!-- Text -->
                         <label for="subject">Subject:</label>
                         <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
                     </li>
                     <li>
+                        <!-- Textarea -->
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
                     </li>
                     <li>
+                        <!-- Dropdown List -->
                         <label for="category">Category:</label>
                         <select id="category" name="category" required>
                             <option value="General">General Inquiry</option>
@@ -76,22 +82,26 @@
                         </select>
                     </li>
                     <li>
+                        <!-- Date -->
                         <label for="birthdate">Birthdate:</label>
                         <input type="date" id="birthdate" name="birthdate">
                     </li>
                     <li>
+                        <!-- Radio -->
                         <label>Gender:</label><br>
-                        <input type="radio" id="male" name="gender" value="male">
-                        <label for="male">Male</label>
-                        <input type="radio" id="female" name="gender" value="female">
-                        <label for="female">Female</label>
+                        <label for="male"> Male | Female </label>
+                        Male : <input type="radio" id="male" name="gender" value="male">
+                        Female: <input type="radio" id="female" name="gender" value="female">
                     </li>
                     <li>
+                        <!-- Checkbox -->
                         <input type="checkbox" id="subscribe" name="subscribe" value="subscribe">
                         <label for="subscribe">Subscribe to newsletter</label>
                     </li>
                     <li>
+                        <!-- Submit Button -->
                         <button type="submit">Submit Request</button>
+                        <!-- Reset Button -->
                         <button type="reset">Reset Form</button>
                     </li>
                 </ol>
