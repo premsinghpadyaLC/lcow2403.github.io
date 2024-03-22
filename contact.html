@@ -47,25 +47,56 @@
         </header>
         
     <h2>Contact Us</h2> <!-- 5. Include headings and instructions -->
-    <form>
-        <fieldset> <!-- 6a. Use fieldset element to group related elements -->
-            <legend>Contact Information</legend> <!-- 6a. Use legend to describe the purpose of the fieldset -->
-            <label for="name">Name:</label> <!-- 6c. Include labels for form controls -->
-            <input type="text" id="name" name="name" placeholder="Enter your name" required><br> <!-- 6b, 6g. Include input element with attributes -->
- 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
- 
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" placeholder="Enter subject" required><br>
- 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea> <!-- 6b, 6g. Include textarea element with attributes -->
-        </fieldset>
-        
-        <button type="submit">Submit Request</button> <!-- 6e. Include submit button -->
-        <button type="reset">Reset Form</button> <!-- 6f. Include reset button -->
-    </form>        
+    <form action="#" method="POST">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <ol>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus>
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </li>
+                    <li>
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+                    </li>
+                    <li>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                    </li>
+                    <li>
+                        <label for="category">Category:</label>
+                        <select id="category" name="category" required>
+                            <option value="General">General Inquiry</option>
+                            <option value="Technical">Technical Support</option>
+                            <option value="Feedback">Feedback</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="birthdate">Birthdate:</label>
+                        <input type="date" id="birthdate" name="birthdate">
+                    </li>
+                    <li>
+                        <label>Gender:</label><br>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="subscribe" name="subscribe" value="subscribe">
+                        <label for="subscribe">Subscribe to newsletter</label>
+                    </li>
+                    <li>
+                        <button type="submit">Submit Request</button>
+                        <button type="reset">Reset Form</button>
+                    </li>
+                </ol>
+            </fieldset>
+        </form>  
         <!-- Footer Section -->
         <footer>
             <!-- Copyright Information -->
