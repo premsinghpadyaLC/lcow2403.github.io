@@ -159,3 +159,45 @@ footer:hover {
     color: #777; /* Color of the font has to be changed */
 }
 
+/* Media Styles */
+
+/* Media Styles */
+section {
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+td.media-container {
+    position: relative;
+    width: 50%;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+td.media-container:hover {
+    transform: scale(0.7);
+}
+video, audio {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.media{
+	background-color: pink;
+}
+
+  .faq-list {
+            list-style-type: none;
+        }
+        
+        .faq-list li {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .answer {
+            display: none;
+        }

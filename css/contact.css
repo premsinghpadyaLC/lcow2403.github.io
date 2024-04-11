@@ -1,4 +1,4 @@
-/*
+ /*
     Student Name: Premsingh Padya
     Student Number: c0924501
     File Name: style.css
@@ -154,24 +154,27 @@ main {
     background-color: #ddd;  /* Background color on hover */
 }
 
-/* 4. Set width and center the form */
+/* Styles for form elements */
 form {
     width: 50%;
     margin: 0 auto;
 }
- 
-/* 6a. Style for fieldset */
+.contactH2
+{
+	text-align: center;
+	
+}
+
 fieldset {
     margin-bottom: 20px;
 }
- 
-/* 6c. Style for labels */
+
 label {
     display: block;
     margin-bottom: 5px;
+	text-align: center;
 }
- 
-/* 6b, 6g. Styles for text input, email input, and textarea */
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -182,8 +185,7 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box;
 }
- 
-/* 6e, 6f. Styles for submit and reset buttons */
+
 button {
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -193,38 +195,37 @@ button {
     cursor: pointer;
     margin-right: 10px;
 }
- 
-/* Hover styles for buttons */
+
 button:hover {
     background-color: #45a049;
 }
- 
-/* Styles for reset button */
+
 button[type="reset"] {
     background-color: #f44336;
 }
- 
-/* Hover styles for reset button */
+
 button[type="reset"]:hover {
     background-color: #f44336;
 }
+
 input[type="date"],
-input[type="radio"],
 input[type="checkbox"] {
     margin-top: 5px;
 }
- 
-input[type="radio"] + label,
+
 input[type="checkbox"] + label {
     margin-left: 5px;
 }
- 
+
 input[type="date"],
 input[type="radio"],
 input[type="checkbox"],
 label {
-    display: block;
-    font-weight: bold;
+    display: inline-block;
+}
+
+.btn{
+	text-align: center;
 }
 
 footer:hover {
