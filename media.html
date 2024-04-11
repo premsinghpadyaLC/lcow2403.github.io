@@ -10,12 +10,13 @@
     <!-- Metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <!-- Link to my stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-
+	<script src="scripts/contact.js"></script>
     <!-- Title and Favicon -->
     <title>BBQ - Media</title>
+	<link rel="icon" type="image/x-icon" href="images/BBQ_Logo.ico">
+	
 </head>
 <body>
     <!-- Container Element -->
@@ -26,7 +27,6 @@
             <a href="index.html" class="logo">
                 <img src="images/BBQ_Logo.png" alt="Company Logo">
             </a>
-
             <!-- Navigation Links -->
             <ul class="row">
                 <li><a href="index.html">Home &#129366;</a> &nbsp; </li>
@@ -39,30 +39,49 @@
                 <li><a href="contact.html">Contact Us &#127869;</a> &nbsp; </li>
             </ul>
         </nav>
-
         <!-- Header Element with Company Banner Image -->
         <header>
             <!-- Company Banner Image with Alt Attribute, Height, and Width -->
             <img src="images/company-banner.png" alt="BBQ Banner" height="200" width="800">
         </header>
-
         <!-- Media Section -->
-        <section>
-            <h1>Media - Nothing Added Yet</h1>
-            <!-- Consider adding actual content or placeholders for media elements here -->
-        </section>
+        <section class="media"><!-- Media Section -->
+		<h1>Media</h1>
+		<p>Check out our latest promotional video showcasing the delicious BBQ dishes we offer:</p>
+		<table>
+			<tr>
+				<td class="media-container" id="video-container">
+					<!-- Video Player -->
+					<video controls>
+						<source src="media/bbq.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<p>Play our catchy BBQ jingle to know more about our restaurant</p>
+
+				</td>
+				<td class="media-container" id="audio-container">
+					<!-- Audio Player -->
+					<audio controls>
+						<source src="media/tune.mp3" type="audio/mp3">
+						Your browser does not support the audio tag.
+					</audio>
+					<p>Listen to our catchy BBQ jingle to get a taste of what awaits you at our restaurant</p>
+				</td>
+			</tr>
+		</table>
+	</section>
 
         <!-- Footer Section -->
         <footer>
             <!-- Copyright Information -->
             <p>&copy; Copyright 2099. All Rights Reserved.</p>
-            
             <!-- My Name and Student Number -->
             <p>Premsingh Padya. &nbsp; &nbsp; Student Number: C0924501</p>
-            
             <!-- Request Information Link with Email -->
             <p>Request Information: <a href="mailto:info@bbqinternational.com">info@bbqinternational.com</a></p>
         </footer>
     </div>
+    <!-- Script for hover effect and media playback -->
+    <script src="js/media.js"></script>
 </body>
 </html>

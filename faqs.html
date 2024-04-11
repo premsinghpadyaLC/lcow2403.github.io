@@ -8,17 +8,24 @@
 <html lang="en">
 <head>
     <!-- Metadata -->
+
+    <!-- Metadata -->
     <meta charset="utf-8">
+    <!-- Viewport Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Viewport settings for mobile, tablet, and desktop -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" media="(max-width: 320px)">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" media="(min-width: 321px) and (max-width: 768px)">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" media="(min-width: 769px)">
     
     <!-- Link to my stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Title and Favicon -->
     <title>BBQ - FAQs</title>
+    <link rel="icon" type="image/x-icon" href="images/BBQ_Logo.ico">
 </head>
-<body>
-    <!-- Container Element -->
+   <!-- Container Element -->
     <div id="container">
         <!-- Navigation Bar (with Logo) -->
         <nav class="nav">
@@ -48,8 +55,15 @@
 
         <!-- FAQs Section -->
         <section>
-            <h1>FAQs - Nothing Added Yet</h1>
-            <!-- Consider adding actual content or placeholders for frequently asked questions and their answers -->
+            <h1>FAQs</h1>
+            <ul class="faq-list">
+                <li><strong>Q:</strong> What type of BBQ sauces do you offer?</li>
+                <li class="answer"><strong>A:</strong> We offer a variety of BBQ sauces, including spicy, sweet, and tangy options.</li>
+                <li><strong>Q:</strong> Are your BBQ meats smoked?</li>
+                <li class="answer"><strong>A:</strong> Yes, all our BBQ meats are slow-smoked to perfection for maximum flavor.</li>
+                <li><strong>Q:</strong> Do you cater for large events?</li>
+                <li class="answer"><strong>A:</strong> Yes, we provide catering services for events of all sizes. Contact us for more information.</li>
+            </ul>
         </section>
 
         <!-- Footer Section -->
@@ -64,5 +78,6 @@
             <p>Request Information: <a href="mailto:info@bbqinternational.com">info@bbqinternational.com</a></p>
         </footer>
     </div>
-</body>
-</html>
+	
+	<script src="scripts/media.js"></script>
+	</body></html>

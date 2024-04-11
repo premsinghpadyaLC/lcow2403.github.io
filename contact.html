@@ -11,32 +11,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <!-- 2. Link to my stylesheet -->
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <!-- Link to external JavaScript -->
+	<script src="scripts/contact.js"></script>
 
-    <!-- Title and Favicon -->
+
+    <!-- Title & Favicon-->
     <title>BBQ - Contact Us</title>
+	<link rel="icon" type="image/x-icon" href="images/BBQ_Logo.ico">
 </head>
 <body>
     <!-- Container Element -->
     <div id="container">
         <!-- Navigation Bar (with Logo) -->
         <nav class="nav">
-            <!-- Logo in the Top Left Corner Linking Back to the Home Page -->
+            <!-- Logo linking back to the Home Page -->
             <a href="index.html" class="logo">
                 <img src="images/BBQ_Logo.png" alt="BBQ International Logo">
             </a>
 
             <!-- Navigation Links -->
             <ul class="row">
-                <li><a href="index.html">Home &#129366;</a> &nbsp; </li>
-                <li><a href="about.html">About Us &#127830;</a> &nbsp; </li>
-                <li><a href="team.html">Our Team &#128293;</a> &nbsp; </li>
-                <li><a href="specials.html">Specials &#127831;</a> &nbsp; </li>
-                <li><a href="training.html">Training &#129366;</a> &nbsp; </li>
-                <li><a href="media.html">Media &#127866;</a> &nbsp; </li>
-                <li><a href="faqs.html">FAQs &#127860;</a> &nbsp; </li>
-                <li><a href="contact.html">Contact Us &#127869;</a> &nbsp; </li>
+                <li><a href="index.html">Home 🏠</a> &nbsp; </li>
+                <li><a href="about.html">About Us ℹ️</a> &nbsp; </li>
+                <li><a href="team.html">Our Team 🧑‍🤝‍🧑</a> &nbsp; </li>
+                <li><a href="specials.html">Specials 🎉</a> &nbsp; </li>
+                <li><a href="training.html">Training 📚</a> &nbsp; </li>
+                <li><a href="media.html">Media 🎥</a> &nbsp; </li>
+                <li><a href="faqs.html">FAQs ❓</a> &nbsp; </li>
+                <li><a href="contact.html">Contact Us 📞</a> &nbsp; </li>
             </ul>
         </nav>
 
@@ -46,67 +50,101 @@
             <img src="images/company-banner.png" alt="BBQ Banner" height="200" width="800">
         </header>
         
-    <h2>Contact Us</h2> <!-- 5. Include headings and instructions -->
-    <form action="#" method="POST">
+        <h2 class="contactH2">Contact Us</h2>
+        <!-- Form -->
+        <form action="#" method="POST" id="contactForm" onsubmit="return validateForm()">
             <fieldset>
                 <legend>Contact Information</legend>
                 <!-- Ordered List -->
                 <ol>
                     <li>
-                        <!-- Text -->
+                        <!-- Text Input -->
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" autofocus>
                     </li>
                     <li>
-                        <!-- email -->
+                        <!-- Email Input -->
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" >
                     </li>
                     <li>
-                        <!-- Text -->
+                        <!-- Text Input -->
                         <label for="subject">Subject:</label>
-                        <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+                        <input type="text" id="subject" name="subject" placeholder="Enter subject" >
                     </li>
                     <li>
                         <!-- Textarea -->
                         <label for="message">Message:</label>
-                        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                        <textarea id="message" name="message" placeholder="Enter your message" ></textarea>
                     </li>
                     <li>
-                        <!-- Dropdown List -->
-                        <label for="category">Category:</label>
-                        <select id="category" name="category" required>
+                        <!-- Dropdown List 1 -->
+                        <label for="category1">Customer Category:</label>
+                        <select id="category1" name="category1" required>
+                            <option value="" disabled selected>Select option</option>
+                            <option value="VIP">VIP Customer</option>
+                            <option value="Regular">Regular Customer</option>
+                            <option value="New">New Customer</option>
+                        </select>
+                    </li>
+                    <li>
+                        <!-- Dropdown List 2 -->
+                        <label for="category2">Best way to get back:</label>
+                        <select id="category2" name="category2" required>
+                            <option value="" disabled selected>Select option</option>
+                            <option value="Phone">Phone</option>
+                            <option value="Email">Email</option>
+                            <option value="Text">Text Message</option>
+                        </select>
+                    </li>
+                    <li>
+                        <!-- Dropdown List 3 -->
+                        <label for="category3">Inquiry Type:</label>
+                        <select id="category3" name="category3" required>
+                            <option value="" disabled selected>Select option</option>
                             <option value="General">General Inquiry</option>
                             <option value="Technical">Technical Support</option>
                             <option value="Feedback">Feedback</option>
                         </select>
                     </li>
                     <li>
-                        <!-- Date -->
+                        <!-- Dropdown List 4 -->
+                        <label for="category4">Country of Residence:</label>
+                        <select id="category4" name="category4" required>
+                            <option value="" disabled selected>Select option</option>
+                            <option value="USA">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="CA">Canada</option>
+                        </select>
+                    </li>
+                    <li>
+                        <!-- Date Input -->
                         <label for="birthdate">Birthdate:</label>
                         <input type="date" id="birthdate" name="birthdate">
                     </li>
                     <li>
-                        <!-- Radio -->
-                        <label>Gender:</label><br>
-                        <label for="male"> Male | Female </label>
-                        Male : <input type="radio" id="male" name="gender" value="male">
-                        Female: <input type="radio" id="female" name="gender" value="female">
+                        <!-- Gender Radio Buttons -->
+                        <label>Gender:</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
                     </li>
                     <li>
-                        <!-- Checkbox -->
-                        <input type="checkbox" id="subscribe" name="subscribe" value="subscribe">
-                        <label for="subscribe">Subscribe to newsletter</label>
+                        <!-- Newsletter Subscription Checkbox -->
+                        <label for="subscribe">Please Subscribe to our newsletter: 
+                            <input type="checkbox" id="subscribe" name="subscribe" value="subscribe">
+                        </label>
                     </li>
-                    <li>
-                        <!-- Submit Button -->
+                    <li class="btn">
+                        <!-- Submit and Reset Buttons -->
                         <button type="submit">Submit Request</button>
-                        <!-- Reset Button -->
                         <button type="reset">Reset Form</button>
                     </li>
                 </ol>
             </fieldset>
         </form>  
+        
         <!-- Footer Section -->
         <footer>
             <!-- Copyright Information -->
@@ -119,5 +157,8 @@
             <p>Request Information: <a href="mailto:info@bbqinternational.com">info@bbqinternational.com</a></p>
         </footer>
     </div>
+
+    <!-- JavaScript -->
+    <script src="scripts/contact.js"></script>
 </body>
 </html>
