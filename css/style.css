@@ -166,7 +166,7 @@ section {
     text-align: center;
 }
 table {
-    width: 100%;
+    max-width: 100%;
 }
 td.media-container {
     position: relative;
@@ -180,8 +180,8 @@ td.media-container:hover {
     transform: scale(0.7);
 }
 video, audio {
-    width: 50%;
-    height: 50%;
+    max-width: 50%;
+    max-height: 50%;
     object-fit: cover;
 }
 
@@ -194,7 +194,7 @@ video, audio {
         }
         
         .faq-list li {
-            margin-bottom: 10px;
+            margin-bottom: 50px;
             cursor: pointer;
         }
         
