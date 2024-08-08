@@ -1,0 +1,17 @@
+{
+    "title": "Employee Dashboard",
+    "forms": [
+        {
+            "id": "add-product",
+            "fields": ["name", "price", "image"]
+        },
+        {
+            "id": "update-product",
+            "fields": ["id", "name", "price"]
+        },
+        {
+            "id": "delete-product",
+            "fields": ["id"]
+        }
+    ]
+}
