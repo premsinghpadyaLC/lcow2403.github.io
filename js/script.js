@@ -236,16 +236,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const date = new Date();
         const formattedDate = date.toLocaleString();
         
-        let invoiceContent = `Premsingh Padya's BBQ International\n\n`;
-        invoiceContent += `\x1b[1mPremsingh Padya's\x1b[0m\x1b[1m BBQ International\x1b[0m\n\n`;
-        invoiceContent += `Invoice\nDate: ${formattedDate}\n\n`;
-        invoiceContent += 'Product Name | Quantity | Price | Tax | Total\n';
-        invoiceContent += '------------------------------------------------------\n';
+        let invoiceContent = `Invoice\nDate: ${formattedDate}\n\n`;
+        invoiceContent += 'Product Name,Quantity,Price,Total\n';
         
         cart.forEach(item => {
-            const tax = item.price * 0.12;
+            const tax = item.price * 0.12; // Calculate 12% tax
             const itemTotal = (item.price + tax) * item.quantity;
-            invoiceContent += `${item.name.padEnd(15)} | ${item.quantity.toString().padEnd(8)} | $${item.price.toFixed(2).padEnd(6)} | $${tax.toFixed(2).padEnd(6)} | $${itemTotal.toFixed(2)}\n`;
+            invoiceContent += `${item.name},${item.quantity},$${item.price.toFixed(2)},$${itemTotal.toFixed(2)}\n`;
         });
 
         const grandTotal = cart.reduce((total, item) => {
@@ -253,34 +250,45 @@ document.addEventListener('DOMContentLoaded', function() {
             return total + (item.price + tax) * item.quantity;
         }, 0);
 
-        invoiceContent += '------------------------------------------------------\n';
-        invoiceContent += `Grand Total: $${grandTotal.toFixed(2)}\n`;
-        invoiceContent += `\n\nThank you for your purchase!\n\n`;
-        invoiceContent += `\x1b[1mCompany Contact: 123-456-7890\x1b[0m\n`;
+        invoiceContent += `\nTotal Paid: $${grandTotal.toFixed(2)}\n`;
 
         return invoiceContent;
     }
 
-    // Function to place the order and generate invoice
-    function placeOrder(cart) {
-        if (cart.length === 0) {
-            alert('Your cart is empty.');
-            return;
-        }
-
+    // Function to create and download the invoice
+    function downloadInvoice(cart) {
         const invoiceContent = generateInvoice(cart);
         const blob = new Blob([invoiceContent], { type: 'text/plain' });
         const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'invoice.txt';
-        link.click();
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'invoice.txt';
+        a.click();
         URL.revokeObjectURL(url);
-
-        // Clear cart after placing the order
-        localStorage.removeItem('cart');
-        updateCart();
     }
 
+    // Function to place an order and display the order summary
+    function placeOrder(cart) {
+        localStorage.removeItem('cart'); // Clear the cart after placing order
+        updateCart(); // Refresh the cart display
+        showPopup('Order placed successfully!');
+        
+        // Generate and download the invoice
+        downloadInvoice(cart);
+        
+        // Display order summary
+        const orderSummaryContainer = document.createElement('div');
+        orderSummaryContainer.className = 'order-summary';
+        orderSummaryContainer.innerHTML = `
+            <h2>Order Summary</h2>
+            ${cart.map(item => `
+                <p>${item.name} - Quantity: ${item.quantity} - Price: $${item.price.toFixed(2)} - Tax: $${(item.price * 0.12).toFixed(2)} - Total: $${((item.price + (item.price * 0.12)) * item.quantity).toFixed(2)}</p>
+            `).join('')}
+            <p><strong>Total Paid: $${cart.reduce((total, item) => total + (item.price + (item.price * 0.12)) * item.quantity, 0).toFixed(2)}</strong></p>
+        `;
+        document.body.appendChild(orderSummaryContainer);
+    }
+
+    // Fetch and display products when the page loads
     fetchProducts();
 });
