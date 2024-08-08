@@ -1,3 +1,52 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = {
+        home: 'json/home.json',
+        about: 'json/about.json',
+        contact: 'json/contact.json',
+        faqs: 'json/faqs.json',
+        media: 'json/media.json',
+        specials: 'json/specials.json',
+        team: 'json/team.json',
+        training: 'json/training.json'
+    };
+
+    function fetchAndDisplayContent(sectionId, fileName) {
+        fetch(fileName)
+            .then(response => response.json())
+            .then(data => {
+                const section = document.getElementById(sectionId);
+                section.innerHTML = `
+                    <h2>${data.title}</h2>
+                    <p>${data.content}</p>
+                `;
+                section.classList.remove('hidden');
+            })
+            .catch(error => console.error('Error fetching content:', error));
+    }
+
+    function showSection(id) {
+        document.querySelectorAll('main section').forEach(section => {
+            section.classList.add('hidden');
+        });
+        document.getElementById(id).classList.remove('hidden');
+    }
+
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', event => {
+            event.preventDefault();
+            const targetId = anchor.getAttribute('data-target');
+            if (sections[targetId]) {
+                fetchAndDisplayContent(targetId, sections[targetId]);
+            } else {
+                showSection(targetId);
+            }
+        });
+    });
+
+    // Initially show the home section
+    fetchAndDisplayContent('home', sections.home);
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // Section visibility handling
     const sections = document.querySelectorAll('main > section');
