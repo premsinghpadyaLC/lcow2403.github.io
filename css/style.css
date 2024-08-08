@@ -40,7 +40,12 @@ nav a {
     padding: 10px 15px;
     display: inline-block;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 /* Show the Register and Login links only when no user is logged in */
@@ -51,10 +56,6 @@ nav .hidden {
 /* Show all other links when user is logged in */
 nav a:not(.hidden) {
     display: inline-block;
-}
-
-nav a:hover {
-    background-color: #ddd;
 }
 
 /* Main content styles */
@@ -195,21 +196,26 @@ footer:hover {
     z-index: 1000;
 }
 
-/* Adding space above the Place Order button */
+/* Stylish button with vibrant colors and hover effects */
 .place-order-button {
     display: block;
     margin: 20px 0; /* Adjust the margin as needed */
-    padding: 10px 20px;
-    background-color: #f4a261;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #f4a261, #e76f51);
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .place-order-button:hover {
-    background-color: #e76f51;
+    background: linear-gradient(45deg, #e76f51, #f4a261);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
 
 /* Responsive styles */
