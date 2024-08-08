@@ -1,11 +1,4 @@
 {
     "title": "FAQs",
-    "content": "Got questions? We've got answers! Here are some frequently asked questions about BBQ Nation:",
-    "faqs": [
-        {
-            "question": "What are your hours of operation?",
-            "answer": "We are open daily from 11:00 AM to 10:00 PM."
-        }
-        
-    ]
+    "content": "Got questions? We've got answers! Here are some frequently asked questions about BBQ Nation:"
 }
