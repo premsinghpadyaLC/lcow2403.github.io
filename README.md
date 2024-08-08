@@ -1,36 +1,82 @@
-# lcow2403.github.io
-CSD 1103 Front-End Web Development I Term Project
+# CSD 2103 Term Project: Front End Web Development 2
 
-# lcow2403.github.io
+## Project Overview
 
-CSD 1103 Front-End Web Development I Term Project
+This project is a single-page application (SPA) designed to showcase a product line with a fully functional shopping cart feature. The website is developed using plain HTML, CSS, and JavaScript, with a focus on responsiveness and dynamic content fetching. The project is hosted on GitHub Pages.
 
-**Project Overview:**
+## Objectives
 
-In this term project for CSD 1103 Front-End Web Development I, I've meticulously crafted a dynamic website hosted on GitHub's cloud server. With each passing week, I've embraced new challenges and honed my skills in HTML, CSS, and responsive design. Let's delve into the detailed breakdown of my accomplishments:
+- Develop a Single-Page Application: Created a single-page website that includes sections for the product line, shopping cart, and other relevant content.
+- Responsive Design: Implemented a user-friendly and responsive design using CSS.
+- Dynamic Content Fetching: Fetched product data dynamically from a JSON file stored on GitHub Pages.
+- Shopping Cart Functionality: Implemented a shopping cart with local storage to manage user selections and pricing calculations.
+- GitHub Hosting: Hosted the project on GitHub Pages and made it accessible via a GitHub Pages URL.
 
-**Week 4: Establishing Website on Cloud Server**
-With precision, I created the folder structure on the GitHub cloud server, laying down the groundwork for my website's future. Additionally, I uploaded a temporary index.html page, signaling the initiation of my web development journey.
+## Features
 
-**Week 5: Building a Webpage & Enhancing with Links and Images**
-In this pivotal week, I meticulously crafted the index.html, my website's cornerstone. With HTML5 as my canvas, I etched out a sleek structure featuring a captivating header adorned with a company banner image. This header seamlessly integrated a navigation bar, guiding visitors through Home, About, Our Team, and more. The main section greeted visitors with a warm welcome message, complemented by an inviting image. And not to forget the footer, where I left my mark with copyright information and a personal touch.
+1. HTML Structure
+   - A single HTML file that encompasses all sections of the website, including the product line and shopping cart.
 
-**Week 6: Applying CSS Styles to Webpages**
-Harnessing the power of CSS, I transformed the aesthetics of my website, infusing it with personality and flair. Armed with an external style sheet, aptly named styles.css, I orchestrated a symphony of styles. From setting background colors to customizing fonts and borders, every element received meticulous attention. I experimented with various properties, culminating in a visually stunning and cohesive design.
+2. CSS Styling and Layout
+   - Attractive and user-friendly design.
+   - Fully responsive layout that adjusts for different screen sizes.
 
-**Week 7: Specials.html**
-Diving into specials.html, I unleashed my creativity, sculpting a page that captivates and entices. Whether it's spotlighting a product of the week or enticing visitors with weekly sales, I curated an experience that leaves a lasting impression. With captivating imagery and compelling content, specials.html serves as a beacon, drawing visitors deeper into the website's narrative.
+3. JavaScript Functionality
+   - Plain JavaScript used to fetch product data, manage the shopping cart, and handle user interactions.
+   - No external frameworks or libraries (other than jQuery if required).
 
-**Week 8: Responsive Design**
-In the age of multi-device browsing, I ensured my website remains accessible and engaging across all platforms. Leveraging media queries and viewport tags, I transformed about.html into a responsive masterpiece. Seamlessly adapting to mobile, tablet, and desktop viewports, my website delivers a consistent and immersive experience, regardless of the device.
+4. Data Fetching
+   - Product data stored in a JSON file and fetched dynamically to populate the product line section.
 
-**Week 10: Improving Web Design with New Page Layouts**
-Team.html emerges as a testament to my prowess in HTML5 semantic elements. By incorporating article, aside, section, and figure elements, I crafted a page that not only informs but also captivates. From detailing the company's team structure to narrating its rich history, team.html paints a vivid picture, inviting visitors to become part of the journey.
+5. Shopping Cart Implementation
+   - Users can select items, add them to the cart, and view the total price.
+   - Cart information is stored in local storage to persist across sessions.
 
-**Week 11: Creating Tables**
-Training.html showcases my proficiency in creating structured data presentation. With a meticulously crafted HTML table, adorned with borders, captions, and alternating row colors, I transformed raw data into a visually appealing and easy-to-digest format. Coupled with CSS styling in training.css, the table exudes professionalism and clarity, exemplifying my dedication to excellence.
+6. Deployment
+   - Project deployed and accessible via GitHub Pages.
 
-With each passing week, I've pushed the boundaries of my creativity and technical expertise, culminating in a website that stands as a testament to my growth and mastery in front-end web development. Powered by innovation and driven by passion, my website sets a new standard in web design excellence.
+## Technical Details
 
-#Premsingh Padya
-#C0924501
+- HTML: Structured with semantic tags and organized content.
+- CSS: External stylesheet for all styling and layout requirements.
+- JavaScript: Plain JavaScript used for all dynamic content fetching and functionality, ensuring no reliance on frameworks.
+- Data Storage: Product data is stored in a JSON file hosted on GitHub Pages.
+- Local Storage: Used to maintain the shopping cart state across user sessions.
+
+## Instructions
+
+1. Setting Up GitHub Repository
+   - Created a new repository on GitHub.
+   - Cloned the repository to the local machine.
+
+2. HTML Structure
+   - Developed a single HTML file integrating all necessary sections.
+
+3. Styling and Layout
+   - Applied CSS for a responsive and user-friendly design.
+
+4. Fetching Content
+   - Stored product data in a JSON file and fetched it dynamically using JavaScript.
+
+5. Shopping Cart Functionality
+   - Enabled users to add items to the cart, calculate prices, and persist cart data using local storage.
+
+6. Publishing
+   - Pushed the code to GitHub and set up GitHub Pages for hosting.
+
+
+## Grading Rubric
+
+- HTML Structure: Clear, well-organized, and semantic HTML structure.
+- CSS Styling and Layout: Attractive, user-friendly, and fully responsive design.
+- JavaScript Functionality: Efficient, well-organized code with all required features implemented.
+- Data Fetching: Successful data fetching and dynamic display.
+- Shopping Cart Implementation: Fully functional cart with accurate calculations and persistence.
+- Presentation: Clear, concise, and engaging presentation covering all key points.
+- Deployment on GitHub Pages: Successfully deployed, accessible, and fully functional site.
+
+## Additional Notes
+
+- Focused on code readability and maintainability.
+- Ensured all links, images, and resources are correctly linked and functional.
+- Thoroughly tested the website to avoid any broken functionality.
