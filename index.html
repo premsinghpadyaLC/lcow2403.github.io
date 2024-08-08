@@ -3,15 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Line</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>BBQ Nation</title>
 </head>
 <body>
-    <h1>Our Products</h1>
-    <div id="product-list"></div>
+    <!-- Navigation Bar -->
+    <nav id="nav">
+        <a href="#home" data-target="home" aria-label="Navigate to Home">Home</a>
+        <a href="#about" data-target="about" aria-label="Navigate to About Us">About</a>
+        <a href="#contact" data-target="contact" aria-label="Navigate to Contact Us">Contact</a>
+        <a href="#faqs" data-target="faqs" aria-label="Navigate to FAQs">FAQs</a>
+        <a href="#media" data-target="media" aria-label="Navigate to Media">Media</a>
+        <a href="#specials" data-target="specials" aria-label="Navigate to Specials">Specials</a>
+        <a href="#team" data-target="team" aria-label="Navigate to Our Team">Team</a>
+        <a href="#training" data-target="training" aria-label="Navigate to Training">Training</a>
+        <a href="#products" data-target="products" aria-label="Navigate to Products">Products</a>
+        <a href="#cart" data-target="cart" aria-label="Navigate to Cart">Cart</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="header">
+        <img src="images/company-banner.png" alt="BBQ Nation Banner" height="200" width="800">
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="home">
+            <h1>Welcome to BBQ Nation</h1>
+            <p>At BBQ Nation, we pride ourselves on serving the finest BBQ dishes made from the freshest ingredients...</p>
+        </section>
+
+        <section id="about" class="hidden">
+            <h2>About Us</h2>
+            <p>BBQ Nation has been a staple in the community for over a decade...</p>
+        </section>
+
+        <section id="contact" class="hidden">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! If you have any questions or need further information...</p>
+        </section>
+
+        <section id="faqs" class="hidden">
+            <h2>FAQs</h2>
+            <p>Got questions? We've got answers! Here are some frequently asked questions about BBQ Nation:</p>
+            <ul>
+                <li><strong>What are your hours of operation?</strong> We are open daily from 11:00 AM to 10:00 PM.</li>
+                <!-- Add more FAQs as needed -->
+            </ul>
+        </section>
+
+        <section id="media" class="hidden">
+            <h2>Media</h2>
+            <p>Check out our latest media coverage and press releases...</p>
+        </section>
+
+        <section id="specials" class="hidden">
+            <h2>Specials</h2>
+            <p>Don't miss out on our exciting specials! Each week, we offer a variety of deals and discounts on our most popular dishes...</p>
+        </section>
+
+        <section id="team" class="hidden">
+            <h2>Our Team</h2>
+            <p>Meet the passionate individuals who make BBQ Nation a great place to dine...</p>
+        </section>
+
+        <section id="training" class="hidden">
+            <h2>Training</h2>
+            <p>Interested in mastering the art of BBQ? Join our training programs and learn from the best...</p>
+        </section>
+
+        <section id="products" class="hidden">
+            <h2>Our Products</h2>
+            <div id="products-container">
+                <p>Discover our range of BBQ-related products...</p>
+            </div>
+        </section>
+
+<section id="cart" class="hidden">
     <h2>Shopping Cart</h2>
-    <div id="cart"></div>
-    <p id="total"></p>
-    <script src="script.js"></script>
+    <div id="cart-container">
+        <p>Your shopping cart is currently empty. Add some products to your cart and review your order here.</p>
+        <!-- Cart items will be dynamically inserted here -->
+    </div>
+    <p id="total-price">Total: $0.00</p>
+</section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <p>&copy; Copyright 2099. All Rights Reserved.</p>
+        <p>Premsingh Padya. Student Number: C0924501</p>
+        <p>Request Information & for Franchisee: <a href="mailto:info@bbqnation.com">info@bbqnation.com</a></p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
